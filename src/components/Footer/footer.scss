@@ -1,0 +1,129 @@
+.footer {
+    background: #FEFEE3;
+    padding: 50px 0;
+    padding-bottom: 5px;
+position: relative;
+    &-bif {
+
+        &-logo {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: -10px;
+        }
+
+        &-icon {
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    &-contact {
+        margin-left: 11px;
+        position: relative;
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #064CA1;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        &-link {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+
+    &-nav{
+        position: relative;
+        &-title{
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #064CA1;
+            margin-bottom: 10px;
+        }
+        &-link{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+
+    &-social{
+        &-title{
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #064CA1;
+            margin-bottom: 10px;
+        }
+        &-links{
+            display: flex;
+            column-gap: 20px;
+
+        }
+    }
+
+    &-line{
+        background-color: #00000033;
+        height: 1px;
+        margin-top: 30px;
+        position: relative;
+    }
+    &-geeks-logo{
+        display: block;
+        margin: 10px auto;
+        position: relative;
+    }
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .footer .col-3{
+        width: 50%;
+    }
+    .footer-bif-logo{
+    left: -280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-contact,
+    .footer-social{
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .footer-nav{
+        order: 1;
+    }
+    .footer .col-3:first-child{
+        width: 100%;
+    }
+    .footer-bif-logo{
+        height: 65%;
+    }
+    .footer-contact-title{
+        font-size: 14px;
+    }
+    .footer-contact-link{
+        font-size: 12px;
+    }
+}

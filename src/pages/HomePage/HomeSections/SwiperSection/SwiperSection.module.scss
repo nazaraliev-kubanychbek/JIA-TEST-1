@@ -1,0 +1,154 @@
+@import '../../../../index.module.scss';
+
+.container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 84px;
+    @include respond-to("medium"){
+        margin-bottom: 50px;
+    }
+    @include respond-to("small"){
+        margin-bottom: 60px;
+    }
+
+    h2{
+        font-size: 55px;
+        color: #EDB71B;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        @include respond-to("large"){
+            font-size: 40px;
+        }
+        @include respond-to("medium"){
+            margin-bottom: 25px;
+        }
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+    }
+
+    .prevButton,.prevButtonOne {
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: rotate(180deg) translate(0, -50%);
+        background: #051650 ;
+        height: 90px;
+
+        @include respond-to("x-large"){
+            left: -40px;
+        }
+        @include respond-to("large"){
+            left: 5px;
+        }
+        @include respond-to("medium"){
+            left: -5px;
+        }
+    }
+
+    .nextButton,.nextButtonOne{
+        position: absolute;
+        right: -30px;
+        height: 90px;
+        top: 50%;
+        background: #051650 ;
+        transform: translate(0, 50%);
+        @include respond-to("x-large"){
+            right: -25px;
+        }
+        @include respond-to("large"){
+            right: 25px;
+        }
+        @include respond-to("medium"){
+            right: 10px;
+        }
+    }
+.slides{
+    position: relative;
+    margin-bottom: 100px;
+}
+    .swiperCont {
+        margin: 0 auto;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        &_reverse{
+            transform: rotate(180deg);
+        }
+        @include respond-to("large"){
+            width: 90%;
+        }
+
+        .swiperItem {
+            text-align: center;
+            margin-right: 20px;
+            &_reverse{
+                transform: rotate(180deg);
+            }
+            p {
+                color: #FFFFFF;
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            .photo {
+                width: 100%;
+                height: 390px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+
+    }
+}
+
+.swiderLine{
+    width: 100%;
+    height: 1px;
+    background-color: #D3A60D;
+    margin: 55px 0;
+}
+
+.leftBorder{
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    height: 102%;
+}
+.rightBorder{
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    height: 102%;
+}
+
+@media screen and (max-width:1400px){
+        .leftBorder{
+            display: none;
+        }
+        .rightBorder{
+            display: none;
+        }
+}
+
+
+@media screen and (max-width:576px) {
+    .swiderLine{
+        display: none;
+    }
+}

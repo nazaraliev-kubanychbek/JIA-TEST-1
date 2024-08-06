@@ -1,0 +1,159 @@
+.header {
+
+
+    &-top {
+        background: #FEFEE3;
+        height: 140px;
+
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-img {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:first-child {
+                background-image: url('./icons/bifIcon2.svg');
+                background-size: cover;
+
+            }
+
+            &:last-child {
+                background-image: url('./icons/greenEconomyIcon2.svg');
+                width: 300px;
+                background-size: cover;
+            }
+        }
+    }
+
+
+
+    border: 1px solid #FFFFFF66;
+    background-color: #00000066;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    color: #fff;
+    padding: 38px 0;
+    top: 140px;
+    z-index: 10;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-nav {
+        display: flex;
+        column-gap: 40px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.06em;
+        }
+    }
+
+    &-lang {
+        display: flex;
+        column-gap: 15px;
+        border: 1px solid #fff;
+        padding: 15px 11px;
+        cursor: pointer;
+        position: relative;
+
+        &-text {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        &-list {
+            position: absolute;
+            padding: 0 11px;
+            top: 55px;
+            width: 100%;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            height: 0;
+            overflow: hidden;
+            transition: .5s;
+
+            &-show {
+                padding: 15px 11px;
+                height: auto;
+            }
+        }
+    }
+}
+
+.burger-btn{
+    display: none;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .header-nav {
+        column-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header-menu {
+        position: relative;
+        width: 90%;
+    }
+
+    .header-nav {
+        position: absolute;
+        width: 100%;
+        top: 77px;
+        height: 0;
+        overflow: hidden;
+        transition: .5s;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        gap: 20px;
+        a{
+            font-size: 20px;
+        }
+        &-show{
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 15px;
+            opacity: 1;
+            height: auto;
+        }
+    }
+    .burger-btn{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+    .header-top-img-img1{
+            width: 190px;
+    }
+    .header-top-img-img2{
+        width: 75px;
+    }
+}

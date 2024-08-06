@@ -1,0 +1,256 @@
+@import '../../../../index.module.scss';
+.border_response{
+    display: none;
+}
+.border_response_mobile{
+    display: none;
+}
+.container{
+    width: 100%;
+    margin-bottom: 160px;
+    position: relative;
+    @include respond-to("medium"){
+        margin-bottom: 100px;
+    }
+    @include respond-to("small"){
+        margin-bottom: 60px;
+    }
+
+    .whiteBlock{
+        width: 100%;
+    background-image: url('../../../../img/плеер.png');
+        background-color: #E7E7E7;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 50px 0;
+        @include respond-to("medium"){
+            padding: 30px 10px;
+        }
+            .blockVideo:last-child{
+                .text{
+                    h2{
+                        top: 0;
+                    }
+                }
+
+            }
+        .blockVideo{
+            // width: 1400px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            @include respond-to("x-large"){
+                gap: 40px;
+                flex-direction: column-reverse;
+            }
+
+            .video{
+                width: 702px;
+                height: 400px;
+                border-radius: 20px;
+                overflow: hidden;
+
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .text{
+                width: 564px;
+                @include respond-to("x-large"){
+
+                    width: 100%;
+                }
+
+                h2{
+                    color: #064CA1;
+                    font-size: 57px;
+                    background: #FEFEE3;
+                    width: fit-content;
+                    font-weight: 700;
+                    position: relative;
+                    top: -25px;
+                    text-transform: uppercase;
+                    @include respond-to("medium"){
+                        font-size: 25px;
+                    }
+                }
+
+                p{
+                    color: #00000099;
+                    font-size: 20px;
+                    @include respond-to("large"){
+                        font-size: 18px;
+                    }
+                    @include respond-to("medium"){
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .text:nth-child(2){
+                width: 689px;
+                @include respond-to("x-large"){
+                    width: 100%;
+                }
+
+                h2{
+                    text-align: right;
+                    @include respond-to("x-large"){
+                        text-align: center;
+                    }
+                }
+
+                p{
+                    color: #00000099;
+                    font-size: 20px;
+                    text-align: right;
+                    padding-left: 100px;
+                    margin: 10px 0;
+                    @include respond-to("x-large"){
+                        padding-left: 0;
+                        // text-align: center;
+                    }
+                    @include respond-to("large"){
+                        font-size: 18px;
+                    }
+                    @include respond-to("medium"){
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .blockVideo:first-child{
+            margin-bottom: 60px;
+            @include respond-to("x-large"){
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+    }
+}
+
+
+.border1{
+    position: absolute;
+    left: -20px;
+    height: 100%;
+    top:30px;
+    width: fit-content;
+
+}
+.border2{
+    position: absolute;
+    right: -30px;
+    height: 100%;
+    top:-30px;
+    width: fit-content;
+
+}
+.border3{
+    position: absolute;
+    left: 0;
+    height: fit-content;
+    top:0;
+    width: fit-content;
+    width: 580px;
+}
+
+.text p p{
+    font-weight: 500;
+    font-size: 20px;
+    color: #00000099;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.text p ul{
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 1450px) {
+
+    .whiteBlock{
+        .center{
+            // align-items: center;
+            display: flex;
+            flex-direction: column;
+            // padding:0 70px 0 70px;
+            // margin: 0 auto;
+        }
+        .border1{
+            display: none;
+        }
+        .border3{
+            display: none;
+        }
+     .border2{
+        height: auto;
+        width: auto;
+        top: 700px;
+        right: -35px;
+     }
+        .border_response{
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: -35px;
+        }
+        .blockVideo:nth-child(6){
+            width: fit-content;
+            flex-direction: column-reverse;
+            margin-bottom: 150px;
+            .text{
+                h2{
+                    top: 0;
+                }
+            }
+        }
+        .blockVideo:nth-child(7){
+            flex-direction: column;
+            width: fit-content;
+            margin-left: auto;
+            align-items: end    ;
+            text-align: right !important;
+            .text{
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .whiteBlock{
+        .border_response{
+            display: none;
+        }
+        .border2{
+            display: none;
+        }
+        .border_response_mobile{
+            position: absolute;
+            top: 20px;
+            display: block;
+            left: -10px;
+            height: 100%;
+            width: 100%;
+        }
+        .blockVideo:nth-child(6){
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .blockVideo:nth-child(7){
+            flex-direction: column-reverse;
+        }
+
+    }
+}

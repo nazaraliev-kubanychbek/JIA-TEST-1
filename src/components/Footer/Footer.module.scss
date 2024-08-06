@@ -1,0 +1,144 @@
+@import '../../index.module.scss';
+
+.footer {
+    width: 100%;
+    background-color: #E7E7E7;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    .container {
+        width: 100%;
+        padding: 47px 0 24px 0;
+        display: flex;
+        justify-content: space-between;
+        color: #064CA1;
+        gap: 20px;
+
+        @include respond-to("medium") {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 0 auto;
+            padding: 24px 37px 15px 37px;
+
+        }
+
+        p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+
+            @include respond-to("large") {
+                font-size: 16px;
+            }
+            @include respond-to("medium") {
+                font-size: 10px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                margin-right: 10px;
+                
+            }
+        }
+
+        h3 {
+            font-size: 26px;
+        }
+
+        .emblem {
+            grid-column: 1 / -1;
+            text-align: center;
+
+            @include respond-to("medium") {
+                margin: 0 auto;
+            }
+
+            img {
+                width: 335px;
+                height: auto;
+                @include respond-to("x-large") {
+                    width: 206px;
+                }
+                @include respond-to("large") {
+                    width: 170px;
+                }
+                @include respond-to("medium") {
+                    width: 140px;
+                }
+            }
+
+            .geeks {
+                width: 100%;
+                margin-top: 20px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                img {
+                    width: 50px;
+                }
+
+                p {
+                    color: #00000066;
+                    text-align: center;
+                }
+            }
+        }
+
+        .contact,
+        .navigation,
+        .social_media {
+            @include respond-to("medium") {
+                grid-column: auto;
+            }
+
+            a {
+                color: #064CA1;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            img {
+                width: 40px;
+                margin: 10px 20px 10px 0;
+                cursor: pointer;
+                @include respond-to("medium") {
+                    width: 15px;
+                }
+            }
+        }
+
+        .social_media{
+            img{
+                @include respond-to("medium") {
+                    width: 22px;
+                }
+            }
+        }
+
+        .geeks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-column: 1 / -1;
+            text-align: center;
+            width: 179px;
+            margin: 0 auto;
+
+            img {
+                width: 29px;
+                margin-right: 5px;
+            }
+
+            p {
+                color: #00000066;
+            }
+        }
+    }
+}

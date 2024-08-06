@@ -1,0 +1,72 @@
+@import '../../index.module.scss';
+
+
+.burgerMenu {
+    position: relative;
+}
+
+.burgerIcon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    transition: all 0.3s ease;
+}
+
+.burgerIcon .bar {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.burgerIcon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(11px);
+}
+
+.burgerIcon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burgerIcon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-11px);
+}
+
+.menu {
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: -15px;
+    background: rgba(0, 0, 0, 0.57);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.467);
+    padding: 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    @include respond-to('medium'){
+        width: 400px;
+    }
+}
+
+.menu.open {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+    color: black;
+    font-size: 14px;
+    @include respond-to('medium'){
+        font-size: 18px;
+    }
+}

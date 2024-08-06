@@ -1,0 +1,37 @@
+@import '../../index.module.scss';
+
+.container{
+    width: 100%;
+    background-color: #E7E7E7;
+
+    .headerTop{
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img:first-child{
+            width: 368px;
+            height: auto;
+        }
+
+        img{
+            width: 141px;
+            height: auto;
+        }
+        @include respond-to('medium'){
+            img:first-child{
+                width: 184px;
+            }
+            img{
+                width: 75px;
+            }
+        }
+        @include respond-to('x-large'){
+            width: 100%;
+        }
+    }
+
+
+}

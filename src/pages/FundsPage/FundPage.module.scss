@@ -1,0 +1,50 @@
+.fund {
+  .title_page {
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin:0px 0 170px 0px;
+    text-transform: uppercase;
+    max-width: 1000px;
+  }
+
+  .section {
+    width: 100%;
+    background-image: url("../../img/abstraklines.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-top: 180px;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+  }
+}
+
+
+@media (max-width:900px) {
+.fund {
+  .title_page {
+    font-size: 55px;
+  }
+}
+}
+@media (max-width:615px) {
+  .fund {
+    .title_page {
+      font-size: 35px;
+    }
+    .section{
+      height: 400px;
+    }
+  }
+}
+@media (max-width:400px) {
+  .fund {
+    .title_page {
+      font-size: 24px;
+    }
+  }
+}
